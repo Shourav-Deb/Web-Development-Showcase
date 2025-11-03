@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shourav’s Bootstrap Showcase</title>
+
+    <link rel="icon" sizes="32x32" href="https://i.pinimg.com/originals/38/02/d4/3802d47c86f48616bf2e715de5faf041.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #060a1f;
+        color: #c2f0ff;
+      }
+      .navbar,
+      footer {
+        background-color: #010314;
+      }
+      .hero {
+        background: linear-gradient(to right, #0099cc, #004080);
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+        box-shadow: 0 0 30px #0099cc;
+      }
+      .btn,
+      .accordion-button,
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+      }
+      .btn:hover {
+        box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+      }
+      .card {
+        background-color: #121c3d;
+        border: 1px solid #0d6efd;
+        color: #c2f0ff;
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px #00ccff;
+      }
+      .carousel-img {
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+        background-color: #000;
+        border-radius: 10px;
+      }
+      .accordion-button {
+        background-color: #0d6efd;
+        color: #fff;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #00ccff;
+        color: #000;
+      }
+      .section-title {
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #00ccff;
+        text-shadow: 0 0 10px #00ccff;
+      }
+      footer {
+        color: #ccc;
+        padding: 30px 0;
+      }
+    </style>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80" tabindex="0">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-info" href="#">Shourav’s WebTech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#carouselExample">Carousel</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Explore Bootstrap Interactions</h1>
+        <p class="lead">Interactive web design made simple</p>
+        <button class="btn btn-light btn-lg me-2" data-bs-toggle="modal" data-bs-target="#infoModal">Open Modal</button>
+        <a href="#carouselExample" class="btn btn-outline-light btn-lg">View Carousel </a>
+        <button class="btn btn-outline-warning btn-lg me-2" data-bs-toggle="offcanvas" data-bs-target="#offCanvasInfo">Open Sidebar</button>
+      </div>
+    </section>
+
+    <section id="features" class="py-5">
+      <div class="container text-center">
+        <h2 class="section-title">Why Use Bootstrap?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="card-icon mb-3">🔧</div>
+                <h5 class="card-title">Responsive Grid</h5>
+                <p class="card-text">Bootstrap uses a 12-column grid system that adapts to all screen sizes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="card-icon mb-3">🎨</div>
+                <h5 class="card-title">Pre-Built Components</h5>
+                <p class="card-text">Build beautiful interfaces quickly using buttons, cards, navs, and modals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="card-icon mb-3">⚡</div>
+                <h5 class="card-title">Interactivity</h5>
+                <p class="card-text">Add modals, accordions, tooltips, and carousels without writing JS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5">
+          <button type="button" class="btn btn-info me-2 " data-bs-toggle="tooltip" title="Meet the tooltip!">Hover Me</button>
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="popover" title="Popover Title" data-bs-content="Hey there, it is a Bootstrap popover with more info.">Click for Popover</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="carouselExample">
+      <div class="container text-center">
+        <h2 class="section-title">Bootstrap Carousel</h2>
+        <div id="demoCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://getbootstrap.com/docs/5.3/assets/img/bootstrap-icons.png" class="d-block w-100 carousel-img" alt="Slide 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="https://files.codingninjas.in/article_images/bootstrap-alerts-1-1674507467.webp" class="d-block w-100 carousel-img" alt="Slide 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="https://pbs.twimg.com/media/Ef5XBPEXkAMGdVe?format=png&name=large" class="d-block w-100 carousel-img" alt="Slide 3" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">1. What is Bootstrap?</button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Bootstrap is a front-end CSS framework for building responsive websites quickly using ready-made classes and components.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">2. Do I need to install anything for bootstrap?</button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">No. Nothing have to install for bootstrap.</div>
+            </div>
+          </div>
+
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">3. What tools have been used?</button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">A regular PC, VS CODE & Basic of HTML, CSS & Bootstrap Framework.</div>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5 text-center">
+      <div class="container">
+        <h2 class="section-title">About This Assignment</h2>
+        <p>This site is created by <strong>Shourav Deb</strong></p>
+        <p></strong></p>
+      </div>
+    </section>
+
+    <section class="py-5 text-center bg-dark">
+      <div class="container">
+        <h2 class="section-title">Progress of This Assignment</h2>
+        <p class="mb-4">Bootstrap Features Demonstrated</p>
+        <div class="progress" style="height: 25px;">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 80%;">80% Complete</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Shourav Deb | Built with Bootstrap 5 Library</p>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">About Bootstrap</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">Bootstrap lets you build responsive, modern web pages using built-in CSS and JavaScript components.</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offCanvasInfo">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">More Bootstrap Magic</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>This sidebar uses Bootstrap's offcanvas component. It's responsive, accessible, and perfect for menus, info, or navigation!</p>
+        <ul>
+          <li>Fully responsive</li>
+          <li>Mobile-friendly</li>
+          <li>Easy to customize</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+      popoverTriggerList.forEach(el => new bootstrap.Popover(el));
+    </script>
+  </body>
+</html>
