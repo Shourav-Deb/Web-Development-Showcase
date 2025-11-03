@@ -20,7 +20,7 @@ Over time, I’ll keep adding more as I improve my skills in design and function
 
 ---
 
-💡 *Each folder is an independent mini-project. Open `index` in your browser to view it.*
+> 💡 *Each folder is an independent mini-project. Open `index` in your browser to view it.*
 
 ---
 
