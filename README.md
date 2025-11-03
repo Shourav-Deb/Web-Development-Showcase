@@ -1,7 +1,7 @@
 <h1 align="center">🌐 Web Development Showcase 🌐</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yourusername/Web-Development-Showcase/main/assets/banner.png" alt="Web Development Showcase Banner" width="800">
+  <img src="https://i.pinimg.com/1200x/23/cf/dd/23cfdd27ff4b0213a616751ee67b91b9.jpg" alt="Web Development Showcase Banner" width="1200">
 </p>
 
 <p align="center">
